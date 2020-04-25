@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: aquamarine; */
+}
+
+body{
+    font-family: 'Fredoka One', cursive;    
+    text-align: center;
+}
+
+
+.input{
+    text-align: center;
+    margin: 100px 0;
+
+}
+
+input[type="text"]{
+    
+    height: 75px;
+    width: 400px;
+    background: #e7e7e7;
+    font-family: 'Fredoka One', cursive;    
+    font-weight: bold;
+    font-size: 22px;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 10px;
+    margin-top: 0.5%;
+
+}
+
+input[type="submit"]{  
+    
+    height: 75px;
+    width: 100px;
+    background: #e7e7e7;
+    font-family: 'Fredoka One', cursive;    
+    font-weight: bold;
+    font-size: 22px;
+    border: none;
+    border-radius: 15px;
+    margin-top: 1%;
+}
+
+
+.currentWeather{
+    text-align: center;
+    font-size: 22px; 
+    font-family: 'Fredoka One', cursive; 
+    margin-bottom: 5%;   
+    /* background: #e7e7e7; */
+    /*width: 900px; */
+}
+
+.forecastWeather{
+    text-align: center;
+    font-size: 18px; 
+    font-family: 'Fredoka One', cursive;    
+    /* background: #e7e7e7; */
+    /*width: 900px; */
+}
+
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+.Center { 
+    
+    background-color: #e7e7e7; 
+    top: 50%; 
+    left: 50%; 
+    margin-top: -100px; 
+    margin-left: -100px; 
+} 
+
+.marg{
+        position: relative;
+        text-align: center;
+        padding-top: 30vh;
+}
+.Day{
+    margin-bottom: 3%;
+    padding: 1%;
+}
+

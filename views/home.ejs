@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+    <div class="container">
+
+        <div class="input marg">
+            <input type="text" class="city" placeholder="Enter a state/city name">
+            <input type="text" class="country" placeholder="Country name"><br>
+            <input type="submit" class="button" value="Submit" >
+        </div>
+    
+        <div class="currentWeather hide"  >
+            <div class="card bg-info " style="width: 97%; margin-left: 1%" >
+                <div class="card-body">
+
+                        <p class="card-text">Weather as on <span class="Date"></span> is <span class="desc"></span></p>
+                        <p class="card-text">Temperature : <span class="temp"></span>&deg; C</p>
+                        <p class="card-text">Humidity : <span class="humidity"></span></p>
+                        <p class="card-text">precipitation : <span class="precipitation"></span> </p>                    
+
+                </div>
+            </div>
+
+      
+        </div>
+
+
+        <div class="forecastWeather hide">
+
+            <div  class="row" style="display: flex; flex-wrap: wrap" >
+                <%    for(var i=0;i<4;i++){   %>
+
+                        <div class="col-md-3 col-sm-6 Day">
+
+                                <div class="card bg-warning" style="width: 97%; margin-left: 1%">
+                                        <div class="card-body">
+                                          <h5 class="card-title"><span class="DayF"></span></h5>                
+                                          <p class="card-text">Temperature : <span class="TemperatureF"></span>&deg; C</p>
+                                          <p class="card-text">Humidity : <span class="humidityF"></span></p>
+                                          <p class="card-text">Precipitation : <span class="precipitationF"></span></p>
+
+                                        </div>
+                                </div>
+                        </div>
+
+                <%    }  %>            
+            </div>
+        </div>
+    </div>
+   
+    <script src="/event.js" ></script>
+</body>
+</html>

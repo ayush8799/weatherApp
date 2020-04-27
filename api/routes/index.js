@@ -2,6 +2,7 @@ var express= require("express");
 var router = express.Router();
 var axios = require("axios")
 var fetch = require("node-fetch");
+var secret = require("../../secret/secretFile")
 
 router.get("/",function(req,res){    
     res.render("home");    
@@ -12,21 +13,22 @@ router.get('/geocode/:location', async function(req, res){
     
     const location = req.params.location
     var encodedAddress = encodeURIComponent(location);
-    var apikey = "3d32eb4039df48a182f1754bf7d4239d"
+    var apikey1 = secret.openCageData 
 
     var apiURL = "https://api.opencagedata.com/geocode/v1/json"
     var reqURL = apiURL 
                 + "?"
                 + "q=" + encodedAddress
-                + "&key=" + apikey
+                + "&key=" + apikey1
                 + '&pretty=1'
                 + '&no_annotations=1';
 
     await axios.get(reqURL)
           .then( async function(response){
-              const a= response.data.results[0].geometry   
+              const a= response.data.results[0].geometry
+              const apikey2 = secret.openWeatherMap   
 
-              reqWeatherUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + a.lat + '&lon=' + a.lng  + '&units=' + 'metric'+ '&appid=48516b3194818adf1866aed6a6d2c48b'
+              reqWeatherUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + a.lat + '&lon=' + a.lng  + '&units=' + 'metric'+ '&appid=' + apikey2
               const data = await fetch(reqWeatherUrl);
               const json = await data.json()
 
